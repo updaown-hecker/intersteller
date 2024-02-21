@@ -1,0 +1,41 @@
+<h2>Intersteller</h2>
+<html>
+ 
+  <head>
+  </head>
+ 
+  <body>
+    <button>open in about:blank</button>
+    <script>
+      var urlObj = new window.URL(window.location.href);
+      var url = "https://1.videospeed.cl/";
+      if (url) {
+        var win;
+ 
+        document.querySelector('button').onclick = function() {
+          if (win) {
+            win.focus();
+          } else {
+            win = window.open();
+            win.document.body.style.margin = '0';
+            win.document.body.style.height = '100vh';
+            var iframe = win.document.createElement('iframe');
+            iframe.style.border = 'none';
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+            iframe.style.margin = '0';
+            iframe.src = url;
+            win.document.body.appendChild(iframe);
+          }
+          document.querySelector('button').style.bacground = 'grey';
+          document.querySelector('button').innerHTML = "Play now";
+        };
+      }
+ 
+    </script>
+  </body>
+ 
+</html>
+<iframe src="https://1.videospeed.cl/" width="1400" height="1000" frameborder="0" allowfullscreen></iframe>
+
+<h2>idk why the full screen isn't working comment on this link <a target="_blank" rel="noopener noreferrer" href="https://github.com/updaown-hecker/intersteller">https://github.com/updaown-hecker/intersteller</a></h2>
